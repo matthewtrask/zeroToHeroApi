@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
@@ -46,13 +46,20 @@
 				</section>
 
 				<section>
-					<h2>Matt Trask</h2>
+					<h2>This guy</h2>
+					<img height="250px"src="img/matt-cal-phil.jpg"><hr>
 					<ul>
-						<li>Coffee</li>
-						<li>Beer</li>
-						<li>APIs</li>
-						<li>Developer with Tandum.com</li>
+						<li>Sticker Enthusaist</li>
+						<li>Cat Lover</li>
+						<li>Passionate about clean code</li>
+						<li>Developer At Tandum</li>
+						<li>Coffee and Beer</li>
 					</ul>
+				</section>
+				<section>
+					<h4>Purpose</h4>
+					<p>Im aiming to have everyone here leave tonight with at least one new tip to implement within their api's</p>
+					<small>I hope</small>
 				</section>
 
 				<!-- Example of nested vertical slides -->
@@ -61,29 +68,84 @@
 						<h2>What makes a good API?</h2>
 					</section>
 					<section>
-						<h2>Clean API Structure</h2>
-						<p>example: GET /v1/restaurants/{$city}</p>
-						<p>example: POST /v2/users/students/{$id}/{$classId}</p>
-						<p>example: PUT /v1/users/{$id}/edit
+						<h2>What makes a good API?</h2>
+						<p>Clean Endpoints</p>
+						<p>Unexposed Id's from DB tables</p>
+						<p>Documented</p>
+						<p>SEMVER</p>
+						<p>Code Examples</p>
+						<p>Tests</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Clean API Endpoints</h2>
 					</section>
 					<section>
-						<h2>Well written documentation</h2>
+						<p>example: GET /restaurants/{$city}</p>
+					</section>
+					<section>
+						<p>example: POST /students/{$studentUuid}</p>
+					</section>
+					<section>
+						<p>example: PUT /users/{$studentUuid}/edit
+					</section>
+				</section>
+
+					<section>
+						<section>
+							<h2>Proper HTTP Response Codes</h2>
+							<ul>
+								<li>200 OK</li>
+								<li>201 Created</li>
+								<li>301 Moved</li>
+								<li>400 Request</li>
+								<li>404 Not Found</li>
+								<li>503 Service Unavailable</li>
+							</ul>
+						</section>
+						<section>
+							<h2>Obscure Codes</h2>
+							<ul>
+								<li>418 I'm a teapot</li>
+								<li>207 Multi-status</li>
+								<li>303 See Other</li>
+								<li>422 Unprocessable Entity</li>
+								<li>506 Variant Also Negotiates</li>
+							</ul>
+						</section>
+						<section>
+							<h4>Point In Case</h4>
+							<img src="img/pikachu.jpg" height="300px">
+						</section>
+					</section>
+
+					<section>
+						<section>
+							<h2>Well written documentation</h2>
+							<small>Both internally and externally</small>
+						</section>
+						<section>
+							<h4>Internally</h4>
 						<ul>
-							<li>openapis.org</li>
+							<li>openapis.org </li>
+							<li>swagger</li>
 							<li>apiary.io</li>
 							<li>apidocjs.com</li>
+							<li>API Blueprint + aglio</p>
 						</ul>
-					</section>
-					<section>
-						<h2>Proper HTTP Response Codes</h2>
+						</section>
+						<section>
+							<h4>Externally</h4>
 						<ul>
-							<li>200 OK</li>
-							<li>201 Created</li>
-							<li>301 Moved</li>
-							<li>400 Request</li>
-							<li>404 Not Found</li>
-							<li>503 Service Unavailable</li>
-						</ul>
+							<li>Jekyll (Ruby)</li>
+							<li>Sculpin (PHP)</li>
+							<li>Hyde (Python)</li>
+							<li>Hugo (Go)</li>
+						</ul><br>
+						<p><small>All are static Markdown -> HTML and can be hosted for free on Github/Gitlab</small></p>
+						</section>
 					</section>
 					<section>
 						<h2>Be explicit in response data type</h2>
@@ -92,9 +154,25 @@
 						<p>...and make it uniform</p>
 					</section>
 					<section>
-						<h2>SEMVER</h2>
-						<p>major.minor.patch</p>
+						<h2>Same with method names</h2>
+						<p>snake_case</p>
+						<p>camelCase</p>
+						<h4>Make it uniform</h4>
 					</section>
+					<section>
+						<section>
+							<h2>SEMVER &amp; Versioning</h2>
+							<p>major.minor.patch</p>
+						</section>
+						<section>
+							<h2>Versioning</h2>
+							<p>No "Right" Way</p>
+							<ul>
+								<li>URI -  /v2/restaurants/</li>
+								<li>Hostname - https://api-v1.cats.com/breeds </li>
+								<li>Body &amp; Query Param</li>
+							</ul>
+						</section>
 				</section>
 				<section>
 					<h1>GET</h1>
@@ -121,8 +199,19 @@
 				<section>
 					<h1>Protect your api</h1>
 					<p>Use a UUID library.</p>
-					<p>Properly auth users with tokens &amp; OAuth.</p>
-					<p>Throttle to protect bandwidth.</p>
+				</section>
+				<section>
+					<h2>Auth</h2>
+					<p>Oauth 1.0 | 2.0</p>
+					<small>thephpleague.com</small>
+				</section>
+				<section>
+					<h2>Throttling</h2>
+				</section>
+				<section>
+					<h2>Testing</h2>
+					<p>PHPUnit</p>
+					<p>Behat</p>
 				</section>
 				<section>
 					<h1>Questions</h1>
