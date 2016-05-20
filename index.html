@@ -41,8 +41,16 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
+					<img src="img/sponsors.png">
+				</section>
+
+				<section>
 					<h1>Zero to Hero</h1>
 					<h3>Tips to building great API's</h3>
+
+				</section>
+				<section>
+					<img src="img/sebastian.jpeg" height="300px">
 				</section>
 
 				<section>
@@ -57,13 +65,33 @@
 					</ul>
 				</section>
 				<section>
-					<h4>Purpose</h4>
-					<p>Im aiming to have everyone here leave tonight with at least one new tip to implement within their api's</p>
+					<h1>Questions</h1>
+					<ul>
+						<li>Twitter: matthewtrask</li>
+						<li>IRC: matthewtrask_</li>
+						<li>Email: mjftrask@gmail.com</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Community Purpose</h2>
+					<p>My first purpose is to help foster and grow the PHP community online, in Atlanta as well as Upstate, SC</p>
+					<p>Seriously, if you arent on any of the IRC rooms (#phpmentoring, #phpc, #php-fig,#coderabbi, #nomadphp, #atlantaphp) or Twitter, you are missing out on so much</p>
+					<small>For reals, speaking and going to conferences is how I got to where I am today.</small>
+				</section>
+				<section>
+					<h4>API Purpose</h4>
+					<p>Have everyone here leave tonight with at least one new tip to implement within their api's</p>
+					<small>This will have a lot of tips and not aimed at any one groud, i.e. Beginners, mids, senior developers etc.</small><br><br>
 					<small>I hope</small>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
+					<section>
+						<h2>What is an API?</h2>
+						<p>An API (Application Programming Interface) is best thought of as a contract provided by one piece of computer software to another.</p>
+						<p>It is the gateway to your application.</p>
+					</section>
 					<section>
 						<h2>What makes a good API?</h2>
 					</section>
@@ -89,13 +117,29 @@
 						<p>example: POST /students/{$studentUuid}</p>
 					</section>
 					<section>
-						<p>example: PUT /users/{$studentUuid}/edit
+						<p>example: PUT /users/{$studentUuid}/edit</p>
+					</section>
+					<section>
+						<h2>True REST</h2>
+						<ul>
+							<li>GET /users</li>
+							<li>POST /users</li>
+							<li>PATCH /users</li>
+							<li>PUT /users</li>
+							<li>DELETE /users</li>
+							<li>OPTIONS /users</li>
+						</ul>
 					</section>
 				</section>
 
 					<section>
 						<section>
 							<h2>Proper HTTP Response Codes</h2>
+							<img src="img/pikachu.jpg" height="300px">
+
+						</section>
+						<section>
+							<h2>Standard</h2>
 							<ul>
 								<li>200 OK</li>
 								<li>201 Created</li>
@@ -114,10 +158,6 @@
 								<li>422 Unprocessable Entity</li>
 								<li>506 Variant Also Negotiates</li>
 							</ul>
-						</section>
-						<section>
-							<h4>Point In Case</h4>
-							<img src="img/pikachu.jpg" height="300px">
 						</section>
 					</section>
 
@@ -145,6 +185,7 @@
 							<li>Hugo (Go)</li>
 						</ul><br>
 						<p><small>All are static Markdown -> HTML and can be hosted for free on Github/Gitlab</small></p>
+						<p>Clean Code examples documented</p>
 						</section>
 					</section>
 					<section>
@@ -197,21 +238,88 @@
 					<small>You should never delete a resource, just change the state in the tables. </small>
 				</section>
 				<section>
-					<h1>Protect your api</h1>
-					<p>Use a UUID library.</p>
+					<h1>OPTIONS</h1>
+					<pre><code>
+...
+Server: Apache/2.4.1 (Unix) OpenSSL/1.0.0g
+Allow: GET,HEAD,POST,OPTIONS,TRACE
+Content-Type: httpd/unix-directory
+...
+					</code></pre>
+					<p>per RFC 2616: Will return 200 OK and options allowed on the URI </p>
 				</section>
 				<section>
-					<h2>Auth</h2>
-					<p>Oauth 1.0 | 2.0</p>
-					<small>thephpleague.com</small>
+					<section>
+						<h2>Protect your api</h2>
+						<p>Use a UUID library.</p>
+						<p>Dont expore auto-incrementing DB id's to the world</p>
+					</section>
+					<section>
+						<p>Oauth 1.0 | 2.0</p>
+						<small>thephpleague.com</small>
+					</section>
+					<section>
+						<p>Header Token</p>
+						<p>X-CATS-AUTH-TOKEN</p>
+					</section>
+				</section>
+
+				<section>
+					<h2>Pagination</h2>
+					<p>Speeds up response time</p>
+					<p>Keeps bandwidth open</p>
+					<p>"and today, we turn to the book of pagination, chapter 10, verses 1 - 3. And the great lord Phil then declared, you must paginate result sets from your API. As he details in his letter to the council of PHP developers, Pagination is holy. It is a needed service amongst the users"</p>
+					<small>Phil didnt say this, but his book is legit the API handbook</small>
 				</section>
 				<section>
-					<h2>Throttling</h2>
+					<section>
+						<h2>Throttling</h2>
+						<p>https://github.com/jaytaph/RateLimitBundle</p>
+						<pre><code>/**
+ * @Ratelimit(methods={"POST"}, limit=100, period=10); // 100 POST requests per 10 seconds
+ */
+class DefaultController extends Controller
+{
+    /**
+     * @ratelimit(method="POST", limit=200, period=10); // 200 POST requests to indexAction allowed.
+     */
+    public function indexAction()
+    {
+    }
+}</code></pre>
+					</section>
 				</section>
 				<section>
-					<h2>Testing</h2>
-					<p>PHPUnit</p>
-					<p>Behat</p>
+					<section>
+						<h2>Testing &amp; Tools</h2>
+						<img src="img/zombie.jpg" height="300px">
+					</section>
+					<section>
+						<h2>Testing</h2>
+						<p>https://github.com/fzaninotto/Faker</p>
+						<p>PHPUnit</p>
+						<p>Behat</p>
+						<p>Xdebug</p>
+						<p>$headers=xdebug_get_headers();</p>
+					</section>
+					<section>
+						<h2>Tools</h2>
+						<p>Fractal: The PHP League</p>
+						<p>Guzzle: HTTP Request/Response</p>
+						<p>Twilio: SMS Service</p>
+						<p>PSR 7: Async Request/Response</p>
+						<p>Dredd.io (node.js)</p>
+						<p>Postman</p>
+					</section>
+					<section>
+						<h2>Frameworks</h2>
+						<p>Lumen</p>
+						<p>Slim</p>
+						<p>Silex</p>
+						<p>Django</p>
+						<p>Flask</p>
+						<p>Sinatra</p>
+					</section>
 				</section>
 				<section>
 					<h1>Questions</h1>
@@ -220,7 +328,7 @@
 						<li>IRC: matthewtrask_</li>
 						<li>Email: mjftrask@gmail.com</li>
 					</ul>
-
+				</section>
 			</div>
 
 		</div>
