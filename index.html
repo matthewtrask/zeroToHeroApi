@@ -4,9 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Zero to Hero | API Tips</title>
+		<title>Open Sourcing Mental Health For One and All</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="description" content="Open Sourcing Mental Health For One and All">
 		<meta name="author" content="Hakim El Hattab">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,8 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
-
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -52,651 +51,156 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Zero to Hero</h1>
-					<h3>Tips to building great REST API's</h3>
-					<p>NomadPHP - US - Sept 21, 2017</p>
+					<h1>Open Sourcing Mental Health For One and All</h1>
+					<h3>Nash.rb - Nov 1, 2018</h3>
 				</section>
 
 				<section>
-					<h1>HTTP 1.1 GET /info</h1>
 					<h2>Matt Trask</h2>
 					<img class="bio--image" src="img/matt.jpg"><br>
 					<ul class="bio--list">
-						<li><i class="fa fa-coffee" aria-hidden="true"></i> Coffee</li>
-						<li><i class="fa fa-bicycle" aria-hidden="true"></i> Cycling</li>
-						<li><i class="fa fa-code" aria-hidden="true"></i> APIs &amp; Open Source</li>
-						<li><i class="fa fa-terminal" aria-hidden="true"></i> Developer with Bernard Health</li>
+						<li>Senior Developer</li>
+						<li>Cycling Advocate</li>
+						<li>Short Person</li>
+						<li>@matthewtrask</h2>
 					</ul>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
+					<h2>What are we talking about?</h2>
+				</section>
+				<section>
+					<h2>Fair Warning</h2>
+					<p>There will be ups, downs, awkwardness, introspection and a laugh or two</p>
+				</section>
+				<section>
+					<h2>Spoiler</h2>
+					<p>Even the happiest people are fighting something inside.</p>
+					<p>Be kind to everyone</p>
+				</section>
+				<section>
+					<h2>My Story</h2>
+				</section>
+				<section>
+					<h2>The Down Part</h2>
+				</section>
+				<section>
 					<section>
-						<h2>What are we talking about?</h2>
-						<p>Good REST API Design</p>
-						<p>What constitutes good REST API design?</p>
+						<h2>Awkward Audience Participation</h2>
 					</section>
 					<section>
-						<h2>What is an API?</h2>
-						<p><b>Public</b>: Way to access data from remote data source (Facebook, Twitter, Youtube, Google)</p>
-						<p><b>Private</b>: Way for one part of your application to interface with another part of your application (front end with back end or controller with repository)</p>
-						<p><b>Partner</b>: $$$$$$$</p>
+						<h4>Do you wear glasses or contacts?</h4>
 					</section>
 					<section>
-						<h2>Who is using and building APIs?</h2>
-						<p>WeWork - Coworking</p>
-						<p>Banks  - CitiBank</p>
-						<p>Airports - Schiphol</p>
-						<p>Telecommunications - Twilio/Nexmo</p>
-						<p>Cats - TheCatApi</p>
+						<h4>How many people have had someone near them fight cancer?</h4>
 					</section>
 					<section>
-						<h2>How can we measure our API design quality?</h2>
-						<p>The Richardson Maturity Model</p>
-						<ul>
-							<li>“The Swamp of POX.” You’re using HTTP to make RPC calls. HTTP is only really used as a tunnel.</li>
-						</ul>
-						<p>The beginnings are there, just keep going!</p>
-						<small>RPC - Remote Procedure Calls - I had to look it up :\</small>
+						<h4>How many people would feel comfortable talking to your boss about a mental health condition?</h4>
 					</section>
 					<section>
-						<h2>How can we measure our API design quality?</h2>
-						<p>The Richardson Maturity Model</p>
-						<ul>
-							<li>Resources. Rather than making every call to a service endpoint, you have multiple endpoints that are used to represent resources, and you’re talking to them. This is the very beginnings of supporting REST.</li>
-						</ul>
-						<p>Youre doing just great!</p>
-					</section>
-					<section>
-						<h2>How can we measure our API design quality?</h2>
-						<p>The Richardson Maturity Model</p>
-						<ul>
-							<li>HTTP Verbs. This is the level that something like Rails gives you out of the box: You interact with these Resources using HTTP verbs, rather than always using POST.</li>
-						</ul>
-						<p>Majority of what we as developers currently use and build</p>
-					</section>
-					<section>
-						<h2>How can we measure our API design quality?</h2>
-						<p>The Richardson Maturity Model</p>
-						<ul>
-							<li>Hypermedia Controls. HATEOAS. You’re 100% REST compliant.</li>
-						</ul>
-						<p>Step where most people fall down</p>
+						<h4>How many people would feel comfortable talking to a colleague about a mental health condition?</h4>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h2>Design Overview</h2>
-						<ul>
-							<li>Use nouns, not verbs</li>
-							<li>GET method and query parameters do not alter state</li>
-							<li>Nouns should be pluralized</li>
-						</ul>
+						<h2>Types of Mental Health Issues</h2>
 					</section>
 					<section>
-						<h2>Design Overview</h2>
-						<ul>
-							<li>Use sub-resources for collections</li>
-							<li>Use HTTP headers for serialization formats</li>
-							<li>HATEOAS (Hypermedia As The Engine Of Application State)</li>
-						</ul>
+						<h2>Depression<h2>
+						<p style="font-size: 24px">The persistent feeling of sadness or loss of interest that characterizes major depression can lead to a range of behavioral and physical symptoms. These may include changes in sleep, appetite, energy level, concentration, daily behavior, or self-esteem. Depression can also be associated with thoughts of suicide.</p>
 					</section>
 					<section>
-						<h2>Design Overview</h2>
-						<ul>
-							<li>Provide filtering, sorting, field selection and paging for collections</li>
-							<li>Version your API</li>
-							<li>Handle Errors with HTTP status codes</li>
-						</ul>
+						<h2>Anxiety<h2>
+						<p style="font-size: 24px">The condition has symptoms similar to panic disorder, obsessive-compulsive disorder, and other types of anxiety. These symptoms include constant worry, restlessness, and trouble with concentration.</p>
 					</section>
 					<section>
-						<h2>Design Overview</h2>
-						<ul>
-							<li>Allow overriding HTTP method</li>
-							<li>Write some documentation (by some, I mean alot)</li>
-							<li>Write tests!</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<h2>1. Use Nouns not Verbs</h2>
-					<section>
-						<p>Verbs describe actions, so we let verbs refer to our actions</p>
+						<h2>ADHD<h2>
+						<p style="font-size: 24px">ADHD often begins in childhood and can persist into adulthood. It may contribute to low self-esteem, troubled relationships, and difficulty at school or work.
+Symptoms include limited attention and hyperactivity.</p>
 					</section>
 					<section>
-						<p>Nouns refer to people, places and things. Things in this instance are our collections</p>
-					</section>
-					<section>
-						<p>Use HTTP verbs to operate on the collections and elements</p>
-					</section>
-					<section>
-						<p>HTTP Verbs</p>
-						<ul>
-							<li>GET - retrieve - <pre><code>public function index()</code></pre></li>
-							<li>POST - create - <pre><code>public function create()</code></pre></li>
-							<li>PATCH - edit singular attribute - <pre><code>public function update()</code></pre></li>
-							<li>PUT - replace with updated resource - <pre><code>public function update()</code></pre></li>
-							<li>DELETE - destroy - <pre><code>public function destroy()</code></pre></li>
-						</ul>
-					</section>
-					<section>
-						<p>Ultimate key to simplicity in API design: 2 URIs only</p>
-						<pre><code>
-			  GET /dogs
-						</code></pre>
-						<pre><code>
-	 POST, PUT, PATCH, GET, DELETE /dogs/1234
-						</code></pre>
-
-						<p>With Laravel, its simple to set this routes up with 1 line of code, like so:</p>
-						<pre><code>
-     Route::resource('/dogs', ['uses' => 'DogsController']);
-						</code></pre>
-						<p>Or you can list them all out</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>2. Do not alter state with GET</h2>
-					<section>
-						<p>GET is assumed to be a safe operation that never modifies the state of the resource</p>
-					</section>
-					<section>
-						<table>
-							<thead>
-								<tr>
-									<th>Operation</th>
-									<th>HTTP</th>
-									<th>SQL</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>Create</td>
-									<td>POST</td>
-									<td>INSERT</td>
-								</tr>
-								<tr>
-									<td>Read</td>
-									<td>GET</td>
-									<td>SELECT</td>
-								</tr>
-								<tr>
-									<td>Update/Edit</td>
-									<td>PATCH/PUT</td>
-									<td>UPDATE</td>
-								</tr>
-								<tr>
-									<td>Delete</td>
-									<td>DELETE</td>
-									<td>DELETE</td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-					<section>
-						<p>GET is cached by browsers, nodes in the network, Internet Service Providers.</p>
-					</section>
-					<section>
-						<p>Unless the content changes, GET to the same URL must return same results to all the users or else you you won't have any trust what so ever in the returned result</p>
-					</section>
-					<section>
-						<p>Good use case for returning 405 - Method Not Allowed</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>3. Nouns should be pluralized</h2>
-					<section>
-						<p>Creates simplicity among URI's</p>
-						<pre><code>
-GET    /bikes
-GET    /bikes/{id}
-POST   /bikes
-PUT    /bikes/{id}
-PATCH  /bikes/{id}
-DELETE /bikes/{id}
-						</code></pre>
-					</section>
-					<section>
-						<p>While singular and plural nouns can be reasonable, being consistent allows developers to predict and guess the method calls as they learn to work with your API.</p>
-					</section>
-					<section>
-						<p>Being consistent also creates a level of trust amongst developers using your API, and they will not fear new versions of your API.</p>
-					</section>
-					<section>
-						<p>Obvious exceptions:</p>
-						<ul>
-							<li>Cart</li>
-							<li>Search</li>
-						</ul>
-					</section>
-				</section>
-
-				<section>
-					<h2>4. Use sub-resources for relations</h2>
-					<section>
-						<p>If a resource is related to another resource, create a sub-resource in the URI</p>
-						<p>Drivers of cars</p>
-						<pre></code>
-						<p>Plane models to airlines</p>
-					</section>
-					<section>
-						<p>If you want a flexible API, aim for fewer subresources. If you want a more readable API, aim for more subresources.</p>
-					</section>
-					<section>
-						<pre><code>
-	GET /cars Return a list of cars
-	GET /cars/711	Return cars with id of 711
-	GET /cars/711/drivers/ Return a list of drivers for car 711
-	GET /cars/711/drivers/4 Return driver #4 for car 711
-	GET /cars/711/drivers/4/wins Return wins for the driver of the 711 car
-						</code></pre>
-					</section>
-					<section>
-						<p>Creates a logical representation of attributes on the object</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>5. Use HTTP headers for serialization formats</h2>
-					<section>
-						<p>Both, client and server, need to know which format is used for the communication.</p>
-						<p>A part of the fabled HATEOAS</p>
-					</section>
-					<section>
-						<p>With this, you tell the type of content you will accept, and the type of content you are returning.</p>
-					</section>
-					<section>
-						<p>Types of format</p>
-						<ul>
-							<li>application/json</li>
-							<li>application/xml</li>
-							<li>multipart/form-data</li>
-							<li>text/html</li>
-						</ul>
-					</section>
-					<section>
-<pre><code>
-HTTP/1.1 200 OK
-Connection: Keep-Alive
-Content-Type: text/html
-Date: Tue, 19 Sep 2017 23:39:34 GMT
-Keep-Alive: timeout=2, max=200
-Server: Apache
-Transfer-Encoding: chunked
-X-Powered-By: PHP/5.4.45
-</code></pre>
-					</section>
-					<section>
-<pre><code>
-Allow: GET, HEAD, OPTIONS
-CF-RAY: 3a1066cbcb46833f-ATL
-Connection: keep-alive
-Content-Encoding: gzip
-Content-Type: application/json
-Date: Tue, 19 Sep 2017 23:42:27 GMT
-Etag: W/"c1df070b0509ebefe72e85d721f40bf0"
-Server: cloudflare-nginx
-Set-Cookie: __cfduid=d2325b6d7caf2ee83455f205e151519261505864547; expires=Wed, 19-Sep-18 23:42:27 GMT; path=/; domain=.swapi.co; HttpOnly
-Transfer-Encoding: chunked
-Vary: Accept, Cookie
-Via: 1.1 vegur
-X-Frame-Options: SAMEORIGIN
-</code></pre>
+						<h2>Burn Out</h2>
+						<p style="font-size: 24px">1. Excessive Ambition<br>
+							 2. Pushing Yourself to Work Harder<br>
+							 3. Neglecting Personal Care and Needs</br>
+							 4. Displacement of Conflict<br>
+							 5. Changes in Values to Validate Self Worth<br>
+							 6. Denial of Problems and Shame<br>
+							 7. Social Withdrawal<br>
+							 8. Obvious Behavior Changes<br>
+							 9. Confusion of Identity<br>
+							 10. Inner Emptiness<br>
+							 11. Depression<br>
+							 12. Mental or Physical Collapse
+						 </p>
 					</section>
 				</section>
 				<section>
-					<h2>6. HATEOAS</h2>
-					<section>
-						<p>Hypermedia As The Engine Of Application State</p>
-					</section>
-					<section>
-						<p>Principle that hypertext links should be used to create a better navigation through the API.</p>
-						<p>Help Links</p>
-						<p>Relevant Error Links</p>
-					</section>
-					<section>
-						<p>By design, REST API's are stateless, once you retrieve the requested resource, they forget what was retrieved.</p>
-					</section>
-					<section>
-						<p>One way to add discoverability to your API is through HATEOAS and linking.</p>
-					</section>
-					<section>
-						<p>Utilizing HATEOAS is seen as the pinnacle of good REST API Design. It would be considered the highest stage of the Richardson Maturity Model</p>
-					</section>
-					<section>
-<pre><code>
-	{
-	  "id": 123,
-	  "title": "Mr.",
-	  "firstname": "Han",
-	  "surname": "Solo",
-	  "emailPromotion": "No",
-	  "_links": {
-	    "self": {
-	      "href": "https://api.example.com/v1/customers/123"
-	    },
-	    "contactDetails": {
-	      "href": "https://api.example.com/v1/customers/123/contactDetails"
-	    },
-	    "orders": {
-	      "href": "https://api.example.com/v1/orders?customerId=123"
-	    }
-	  }
-	}
+					<h2>The Numbers</h2>
+					<p>1 in 5 people, 43.8 million Americans (Combined population of Florida and California), have some sort of mental health issue</p>
+					<p>$1 trillion (12 Zeros!) per year in lost productivity</p>
+					<p>Suicide is the 10th leading cause of death</p>
+				</section>
+				<section>
+					<h2>What's it like working with any of this?</h2>
 
-</code></pre>
+					<p>Spoiler: It's terrible</p>
+				</section>
+				<section>
+					<h2>The up side!</h2>
+				</section>
+				<section>
+					<h2>A long time ago (2013), in a galaxy far far away...</h2>
+				</section>
+				<section>
+					<h2>Since then:</h2>
+					<p>Countless user groups</p>
+					<p>Countless conferences</p>
+					<p>TEDTalks</p>
+					<p>Talks at Google</p>
+				</section>
+				<section>
+					<section>
+						<h2>Mental Health in Tech Survey - 2017</h2>
+						<p>757 responses</p>
 					</section>
 					<section>
-						<p>HATEOAS Lib for PHP</p>
-						<p>https://github.com/willdurand/Hateoas</p>
-
-						<pre><code>
-use JMS\Serializer\Annotation as Serializer;
-use Hateoas\Configuration\Annotation as Hateoas;
-
-/**
- * @Serializer\XmlRoot("user")
- *
- * @Hateoas\Relation("self", href = "expr('/api/users/' ~ object.getId())")
- */
-class User
-{
-    /** @Serializer\XmlAttribute */
-    private $id;
-    private $firstName;
-    private $lastName;
-
-    public function getId() {}
-}
-						</code></pre>
+						<h2>Have you ever discussed your mental health with your employer?</h2>
+						<p>No: 58%</p>
+						<p>Yes: 42%</p>
+					</section>
+					<section>
+						<h2>Have you ever had a coworker discuss their or another coworker's mental health with you?</h2>
+						<p>No: 43%</p>
+						<p>Yes: 57%</p>
 					</section>
 				</section>
 				<section>
-					<h2>7. Filtering, Sorting, Pagination, Field Selection</h2>
 					<section>
-						<p>Let the user figure out how to display it. Especially mobile clients, who may not want or need everything in your collections.</p>
+						<h2>Stories</h2>
 					</section>
 					<section>
-						<p>Filtering</p>
-						<pre><code>
-GET /cars?color=red Returns a list of red cars
-GET /cars?seats<=2 Returns a list of cars with a maximum of 2 seats
-	</code></pre>
+						<p>"it has opened my eyes to mental illness, what it is and eventually triggered me to find help for what I thought was simply part of life, which turned out to be depression and anxiety. my life has drastically improved after finding help and having therapy"</p>
+						<p>@skoop</p>
 					</section>
 					<section>
-						<p>Sorting</p>
-						<pre><code>
-GET /cars?sort=-manufactorer,+model
-						</code></pre>
-						<p>Return a collection of cars with manufactorer in descending order, and model in ascending order.</p>
-						<p>I would argue this should be handled on the front end, but sometimes can be faster on the backend.</p>
+						<p>"These are real issues and I really learned to understand not to judge and to be very careful with other's feelings and expectations. Above all, it's nice to see people accepting vulnerability—I think we're all insecure, so it's important that we're all patient with each other. It's also nice to know that people struggle with anxiety issues—I can be like that at times as well... I really like to see things done once before I dive in myself."</p>
+						<p>Anonymous - osmihelp.org</p>
 					</section>
 					<section>
-						<p>Pagination</p>
-						<p>Everyones favorite thing to deal with.</p>
-						<pre><code>
-GET /cars?offset=10&amp;limit=5
-						</code></pre>
-						<p>Default offset to 20 and limit to 0</p>
-						<p>Tell user total number with X-Total-Count in the response</p>
-					</section>
-				</section>
-				<section>
-					<h2>8. Versioning</h2>
-					<section>
-						<p>So much to say on this topic...</p>
+						<p>"I always want to go out and meet others in the development field, but I can't get myself to go to any of the meetups or conferences. I'd gone to one day conference but was too nervous to talk with any of the other attendees, so even though I really enjoyed the presentations, I left feeling like an idiot for not introducing myself to anyone."</p>
+						<p>Anonymous - osmihelp.org
 					</section>
 					<section>
-						<br>
-						<p>MAJOR.MINOR.PATCH</p>
-						<p>The rules of semver are as follows:</p>
-						<ul>
-							<li>If you bump the patch, you are fixing bugs, and nothing is backwards breaking.</li>
-							<li>If you bump the minor, you are releasing new features, but not breaking backwards compatibility. (You can deprecate and add notices if your next release is major.)</li>
-							<li>If you bump the major, you are saying this new code will break whatever exists now.</li>
-						</ul>
-						<p>Its a myth that you should keep the major version low.</p>
+						<p>"The more we can get these stories out there, the better chance we have of influencing general public perception, and most importantly, helping others who suffer to try to get help."</p>
+						<p>Anonymous - osmihelp.org</p>
 					</section>
 					<section>
-						<p>Version through the URI</p>
-						<pre><code>
-/api/v1/cars/{uuid}/drivers/{uuid}
-						</code></pre>
-
-						<pre><code>
-/api/v2/dinosaurs/{uuid}/cute-ones/{uuid}
-						</code></pre>
-
-						<p>Breaks the thought that URI's should not change</p>
+						<h2>Questions?</section>
 					</section>
-					<section>
-						<p>Version through custom request header</p>
-						<pre><code>
-HTTP GET:
-https://haveibeenpwned.com/api/breachedaccount/foo
-Accept: application/vnd.haveibeenpwned.v2+json
-						</code></pre>
-
-						<p>Semantically, this is how you should tell users how you accept data</p>
-					</section>
-					<section>
-						<p>Can you get away with not explictally versioning your API?</p>
-						<br>
-						<p>...</p>
-						<br>
-						<p>Yes, but! would you trust that API?</p>
-					</section>
-				</section>
-				<section>
-					<h2>9. Handle Errors with HTTP status codes</h2>
-					<section>
-						<p>More so, use the HTTP Codes to describe everything.</p>
-
-						<p>Including if you suddenly became a teapot (418)</p>
-					</section>
-					<section>
-						<p>100's</p>
-						<p>Informational messages from servers.</p>
-						<p>100 - Continue - Server has received request and has approved it</p>
-						<p>Pretty rare to see in the wild</p>
-					</section>
-					<section>
-						<p>200's</p>
-						<p>Success messages</p>
-						<p>200 - OK - Pat yourself on the back and enjoy a strong drink.</p>
-						<p>204 - No Content - Generally used to show action was successful, but you don't need anything else.</p>
-					</section>
-					<section>
-						<p>300's</p>
-						<p>Redirection</p>
-						<p>301 - Permanently Moved - Send all future request to the new URI.</p>
-						<p>303 - See Other - You hit an endpoint with a POST, PUT or PATCH, the response is returned via GET on another endpoint</p>
-					</section>
-					<section>
-						<p>400's</p>
-						<p>Client Messed Up</p>
-						<p>404 - Not Found - It isnt here.</p>
-						<p>405 - Method Not Allowed - You can't POST to a GET method.</p>
-						<p>451 - Unavailable For Legal Reasons</p>
-					</section>
-					<section>
-						<p>500's</p>
-						<p>Server Messed Up</p>
-						<p>500 - Internal Server Error - The server is having an off day, apologies.</p>
-						<p>505 - HTTP Version Not Supported - Good to know with HTTP/2 rolling out.</p>
-					</section>
-					<section>
-						<p>Moral of the story...</p>
-
-						<p>These are not Pokemon, you do not need to "catch them all"</p>
-
-						<p>But there are more codes then just 200, 404 and 500</p>
-					</section>
-				</section>
-				<section>
-					<h2>10. Allow overriding HTTP methods</h2>
-
-					<section>
-						<p>Requirements stipulate things that don't make sense to developer</p>
-
-						<p>Sometimes this is because of a browser or client limitaton, sometimes it's a really tense corporate firewall.</p>
-
-						<p>AJAX/XHR has this limitation as well.</p>
-					</section>
-					<section>
-						<p>To get around this, allow developers to create a tunnel via X-HTTP-METHOD-OVERRIDE</p>
-					</section>
-					<section>
-						<br>
-
-						<pre><code>
-factory.patch = function(form) {
-    return $http({
-        url: AppSettings.base + AppSettings.dataType.all + '/' + form.id,
-        data: form,
-        method: "POST",
-        headers: {
-            "X-HTTP-METHOD-OVERRIDE": "PATCH"
-        }
-    });
-}
-						</code></pre>
-
-						<p>Check if it has been used with <pre><code>$_SERVER['X-HTTP-METHOD-OVERRIDE']</code></pre></p>
-					</section>
-				</section>
-
-				<section>
-					<h2>11. Documentation</h2>
-					<section>
-						<p>Good documentation includes examples.</p>
-						<p>Good documentation does not rely on examples.</p>
-					</section>
-					<section>
-						<p>Even if its an internal API, and will never ever see the light of day, write documentation</p>
-					</section>
-					<section>
-						<p>Helps create trust on your team.</p>
-
-						<p>You will forever be known as "the person we all love and adore cause you took time to do something we all hate"</p>
-					</section>
-					<section>
-						<p>Swagger.io - doc blocks</p>
-						<p>raml.org - meta data</p>
-						<p>apiblueprint.org - meta data</p>
-					</section>
-					<section>
-<pre><code>
-	use Tandum\Api_Web\Web\AbstractAction;
-
-	/**
-	 * Class BrowseEventsAction
-	 * @rest\endpoint /venue/{venue_id}/event
-	 * @rest\method GET Get events at a specific venue
-	 * @rest\title Event Endpoints
-	 * @rest\path Int venue_id The specific venue id
-	 * @rest\body Int page The page value
-	 * @rest\body Int paging Pagination value
-	 * @rest\body String order_by Order value
-	 * @rest\body String filter Fitler value
-	 * @rest\response 200 array(EventDetails)
-	 */
-	class BrowseEventsAction extends AbstractAction
-</code></pre>
-					</section>
-					<section>
-						<p>Examples of great documentation</p>
-						<p>Twilio</p>
-						<p>Nexmo</p>
-						<p>Twitter</p>
-						<p>Stripe</p>
-						<p>SendGrid</p>
-						<p>Foxy.io</p>
-					</section>
-				</section>
-				<section>
-					<h2>12. Testing</h2>
-					<section>
-						<p>On the PHP side we have a few options to test our code</p>
-
-						<p>PHPUnit</p>
-						<p>PHPSpec</p>
-						<p>Behat</p>
-					</section>
-					<section>
-						<p>Larger Test Tools</p>
-						<p>Postman API Client</p>
-					</section>
-					<section>
-						<img height="500px" src="img/swapi.png">
-					</section>
-					<section>
-						<img height="500px" src="img/swapi-headers.png">
-					</section>
-					<section>
-						<br>
-						<p>Dredd.io</p>
-						<p>Dredd is a language-agnostic command-line tool for validating API description document against backend implementation of the API.</p>
-						<pre><code>dredd '<API Description Document>' '<API Location>' [OPTIONS]</code></pre>
-						<pre><code>$ dredd ./apiary.md http://127.0.0.1:3000</code></pre>
-					</section>
-					<section>
-					<pre><code>
-<?php
-
-use Dredd\Hooks;
-
-Hooks::beforeAll(function(&amp;$transaction) {
-	echo "before all";
-});
-
-Hooks::beforeEach(function(&amp;$transaction) {
-	echo "before each";
-});
-
-Hooks::afterEach(function(&amp;$transaction) {
-	echo "after each";
-});
-
-Hooks::afterAll(function(&amp;$transaction) {
-	echo "after all";
-});
-?>
-					</code></pre>
-					</section>
-				</section>
-				<section>
-					<h2>Tools for building APIs</h2>
-					<p>League\Fractal</p>
-					<p>League\Route</p>
-					<p>Monolog\Monolog</p>
-					<p>PHPSwaggerGen</p>
-				</section>
-				<section>
-					<h2>Last Minute Tips</h2>
-					<p>Open API Specification</p>
-					<p>Good Status Page - External APIs</p>
-					<p>Way to be in contact with developers - Email, Twitter, Carrier Pigeon</p>
-					<p>Be consistent</p>
-					<p>License the code! This should be no matter whether its an API or not</p>
-					<p>Unsure of the license? MIT initially</p>
-				</section>
-				<section>
-					<h2>Dive Deeper</h2>
-					<p>Luke Stokes - Foxy.io</p>
-					<p>Phil Sturgeon - Build API's You Won't Hate</p>
-					<p>Troy Hunt - HaveIBeenPwned?</p>
-					<p>Kin Lane - @apievangelist</p>
-				</section>
-				<section>
-					<p>Thanks!</p>
-					<p>@matthewtrask</p>
 				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
